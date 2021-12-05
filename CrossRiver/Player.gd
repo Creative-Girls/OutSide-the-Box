@@ -18,6 +18,11 @@ onready var _animated_sprite = $AnimatedSprite
 onready var step_player = $StepPlayer
 onready var rock_obstacle = $RockDestroy
 
+# var next_scene = preload("res://CoinWolrd/COINworld.tscn")
+
+# func _level_completed():
+	# get_tree().change_scene_to(next_scene)
+	
 func _physics_process(delta):
 	get_input()
 	
@@ -35,6 +40,7 @@ func _physics_process(delta):
 			health = 0
 			print("GameOver!!")
 			get_tree().paused = true
+			#_level_completed()
 			
 	endposition = get_global_position()
 	
@@ -42,6 +48,7 @@ func _physics_process(delta):
 	if endposition.y < -6549:
 		get_tree().paused = true
 		print("GameClear!!")
+		#_level_completed()
 	
 	
 	
