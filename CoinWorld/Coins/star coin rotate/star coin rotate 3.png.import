@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/star coin rotate 3.png-627333316185c19527e90b9179f53ca4.stex"
+path="res://.import/star coin rotate 3.png-d70d792bb58a9d742c6e13edffeed405.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Enemies/star coin rotate/star coin rotate 3.png"
-dest_files=[ "res://.import/star coin rotate 3.png-627333316185c19527e90b9179f53ca4.stex" ]
+source_file="res://Coins/star coin rotate/star coin rotate 3.png"
+dest_files=[ "res://.import/star coin rotate 3.png-d70d792bb58a9d742c6e13edffeed405.stex" ]
 
 [params]
 
