@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/rockdestroy.wav-c8dfb8b08f0494fef1b5ceccc0978d90.sample"
+
+[deps]
+
+source_file="res://CrossRiver/audio/rockdestroy.wav"
+dest_files=[ "res://.import/rockdestroy.wav-c8dfb8b08f0494fef1b5ceccc0978d90.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

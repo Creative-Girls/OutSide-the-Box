@@ -12,7 +12,7 @@ _global_script_classes=[ {
 "base": "Area2D",
 "class": "Obstacle",
 "language": "GDScript",
-"path": "res://Obstacle.gd"
+"path": "res://CrossRiver/Obstacle.gd"
 } ]
 _global_script_class_icons={
 "Obstacle": ""
@@ -21,8 +21,8 @@ _global_script_class_icons={
 [application]
 
 config/name="CrossRiver"
-run/main_scene="res://World.tscn"
-config/icon="res://image/icon.png"
+run/main_scene="res://CrossRiver/World.tscn"
+config/icon="res://CrossRiver/image/icon.png"
 
 [audio]
 
@@ -52,4 +52,4 @@ common/enable_pause_aware_picking=true
 
 [rendering]
 
-environment/default_environment="res://default_env.tres"
+environment/default_environment="res://CrossRiver/default_env.tres"
