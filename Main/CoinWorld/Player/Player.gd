@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-const PlayerHurtSound = preload("res://Player/PlayerHurtSound.tscn")
+
 
 export var ACCELERATION = 500
 export var MAX_SPEED = 80
@@ -13,7 +13,7 @@ enum {
 
 var state = MOVE
 var velocity = Vector2.ZERO
-var roll_vector = Vector2.DOWN
+
 var stats = PlayerStats
 
 onready var animationPlayer = $AnimationPlayer
@@ -27,7 +27,7 @@ func _ready():
 	randomize()
 	stats.connect("no_health", self, "queue_free")
 	animationTree.active = true
-	swordHitbox.knockback_vector = roll_vector
+
 
 func _physics_process(delta):
 	match state:
@@ -41,8 +41,8 @@ func move_state(delta):
 	input_vector = input_vector.normalized()
 	
 	if input_vector != Vector2.ZERO:
-		roll_vector = input_vector
-		swordHitbox.knockback_vector = input_vector
+
+	
 		animationTree.set("parameters/Idle/blend_position", input_vector)
 		animationTree.set("parameters/Run/blend_position", input_vector)
 		animationState.travel("Run")
@@ -60,8 +60,8 @@ func _on_Hurtbox_area_entered(area):
 	stats.health -= area.damage
 	hurtbox.start_invincibility(0.6)
 	hurtbox.create_hit_effect()
-	var playerHurtSound = PlayerHurtSound.instance()
-	get_tree().current_scene.add_child(playerHurtSound)
+
+
 	
 func _on_Hurtbox_invincibility_started():
 	blinkAnimationPlayer.play("Start")
