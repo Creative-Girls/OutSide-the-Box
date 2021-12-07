@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/star coin rotate 6.png-62456e1cf65ac922095222a92ac5c4f3.stex"
+path="res://.import/coin.png-9d8eb28f5d133f9b1d3da6ef4242c01e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Coins/star coin rotate/star coin rotate 6.png"
-dest_files=[ "res://.import/star coin rotate 6.png-62456e1cf65ac922095222a92ac5c4f3.stex" ]
+source_file="res://Coins/star coin rotate/coin.png"
+dest_files=[ "res://.import/coin.png-9d8eb28f5d133f9b1d3da6ef4242c01e.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -29,6 +29,6 @@ process/premult_alpha=false
 process/HDR_as_SRGB=false
 process/invert_color=false
 stream=false
-size_limit=0
-detect_3d=true
+size_limit=20
+detect_3d=false
 svg/scale=1.0
