@@ -12,7 +12,7 @@ var velocity = Vector2()
 var jumping = false
 var endposition
 onready var _animated_sprite = $AnimatedSprite
-
+onready var gameoverlabel = $"/GameOver"
 # get a reference to StepPlayer
 
 onready var step_player = $StepPlayer
@@ -39,6 +39,7 @@ func _physics_process(delta):
 		if health <0:
 			health = 0
 			print("GameOver!!")
+			_on_GameOver_visibility_changed()
 			get_tree().paused = true
 			#_level_completed()
 			
@@ -46,8 +47,9 @@ func _physics_process(delta):
 	
 	# Game clear
 	if endposition.y < -6549:
-		get_tree().paused = true
+		_on_GameOver_visibility_changed()
 		print("GameClear!!")
+		get_tree().paused = true
 		#_level_completed()
 	
 	
@@ -95,9 +97,13 @@ func get_input():
 
 func _on_Obstacle_body_entered(body):
 	damage_mode = true
-	
-
-
 func _on_Obstacle_body_exited(body):
 	damage_mode = false
+	
+func _on_Chicken_body_entered(body):
+	damage_mode = true
+func _on_Chicken_body_exited(body):
+	damage_mode = false
 
+func _on_GameOver_visibility_changed():
+	gameoverlabel.show()
