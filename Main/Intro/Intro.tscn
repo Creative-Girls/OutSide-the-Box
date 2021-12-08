@@ -1,0 +1,95 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Intro/asset/font/IntroTitle.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Intro/asset/font/ButtonText.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Intro/asset/intro/button.png" type="Texture" id=3]
+[ext_resource path="res://Intro/asset/intro/screenshot-1.png" type="Texture" id=4]
+[ext_resource path="res://Intro/asset/intro/buttonpress.png" type="Texture" id=5]
+[ext_resource path="res://Intro/script/Start.gd" type="Script" id=6]
+[ext_resource path="res://Intro/script/End.gd" type="Script" id=7]
+
+[node name="Intro" type="Node2D"]
+
+[node name="Background" type="TextureRect" parent="."]
+modulate = Color( 0.537255, 0.537255, 0.537255, 1 )
+margin_right = 1023.0
+margin_bottom = 600.0
+texture = ExtResource( 4 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Start" type="TextureButton" parent="."]
+margin_left = 456.0
+margin_top = 274.0
+margin_right = 590.0
+margin_bottom = 408.0
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 5 )
+expand = true
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Start_text" type="Label" parent="Start"]
+margin_left = 8.0
+margin_top = 43.0
+margin_right = 129.0
+margin_bottom = 87.0
+custom_colors/font_color = Color( 0.988235, 0.670588, 0, 1 )
+custom_fonts/font = ExtResource( 2 )
+text = "START"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="End" type="TextureButton" parent="."]
+margin_left = 456.0
+margin_top = 376.0
+margin_right = 590.0
+margin_bottom = 510.0
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 5 )
+expand = true
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="End_text" type="Label" parent="End"]
+margin_left = 1.0
+margin_top = 40.0
+margin_right = 134.0
+margin_bottom = 88.0
+custom_colors/font_color = Color( 0.988235, 0.670588, 0, 1 )
+custom_fonts/font = ExtResource( 2 )
+text = "END"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="Label" parent="."]
+margin_left = 213.0
+margin_top = 112.0
+margin_right = 828.0
+margin_bottom = 230.0
+custom_colors/font_color = Color( 1, 0.772549, 0, 1 )
+custom_fonts/font = ExtResource( 1 )
+text = "Outside the Box"
+align = 1
+valign = 1
+autowrap = true
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="button_up" from="Start" to="Start" method="_on_Start_button_up"]
+[connection signal="pressed" from="Start" to="Start" method="_on_Start_pressed"]
+[connection signal="pressed" from="End" to="End" method="_on_End_pressed"]

@@ -21,7 +21,7 @@ _global_script_class_icons={
 [application]
 
 config/name="CrossRiver"
-run/main_scene="res://CrossRiver/World.tscn"
+run/main_scene="res://Intro/Intro.tscn"
 config/icon="res://CrossRiver/image/icon.png"
 
 [audio]
