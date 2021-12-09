@@ -99,7 +99,6 @@ func get_input():
 	
 	velocity = velocity.normalized() * speed
 
-
 func _on_Obstacle_body_entered(body):
 	damage_mode = true
 func _on_Obstacle_body_exited(body):
@@ -113,9 +112,5 @@ func _on_Title_visibility_changed():
 	titlelabel.hide()
 
 
-func _on_Octo_body_entered(body):
-	pass # Replace with function body.
-
-
-func _on_Octo_body_exited(body):
+func _on_Turtle_Obstacle_exited(body):
 	pass # Replace with function body.
