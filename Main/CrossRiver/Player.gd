@@ -12,7 +12,10 @@ var velocity = Vector2()
 var jumping = false
 var endposition
 onready var _animated_sprite = $AnimatedSprite
-onready var gameoverlabel = $"/GameOver"
+onready var gameoverlabel = $"UI/GameOver"
+onready var gameclearlabel = $"UI/GameClear"
+onready var titlelabel = $"UI/Title"
+
 # get a reference to StepPlayer
 
 onready var step_player = $StepPlayer
@@ -39,24 +42,26 @@ func _physics_process(delta):
 		if health <0:
 			health = 0
 			print("GameOver!!")
-			_on_GameOver_visibility_changed()
+			gameoverlabel.show()
 			get_tree().paused = true
-			#_level_completed()
+			
 			
 	endposition = get_global_position()
 	
 	# Game clear
 	if endposition.y < -6549:
-		_on_GameOver_visibility_changed()
+		
 		print("GameClear!!")
+		gameclearlabel.show()
 		get_tree().paused = true
-		#_level_completed()
+		
 	
 	
 	
 func get_input():
 	# set velocity based on the keys pressed
 	velocity = Vector2()
+	
 	var jump = Input.is_action_pressed("jump") 
 	if Input.is_action_pressed("ui_right"):
 		_animated_sprite.stop()
@@ -71,8 +76,10 @@ func get_input():
 		_animated_sprite.play()
 		_animated_sprite.flip_h = true
 	elif Input.is_action_pressed("ui_up"):
+		_on_Title_visibility_changed()
 		velocity.y -= 1
 		_animated_sprite.play()
+		
 		_animated_sprite.flip_h = false
 
 	elif Input.is_action_pressed("jump"):
@@ -93,17 +100,22 @@ func get_input():
 	velocity = velocity.normalized() * speed
 
 
-
-
 func _on_Obstacle_body_entered(body):
 	damage_mode = true
 func _on_Obstacle_body_exited(body):
 	damage_mode = false
-	
-func _on_Chicken_body_entered(body):
-	damage_mode = true
-func _on_Chicken_body_exited(body):
-	damage_mode = false
 
 func _on_GameOver_visibility_changed():
 	gameoverlabel.show()
+func _on_GameClear_visibility_changed():
+	gameclearlabel.show()
+func _on_Title_visibility_changed():
+	titlelabel.hide()
+
+
+func _on_Octo_body_entered(body):
+	pass # Replace with function body.
+
+
+func _on_Octo_body_exited(body):
+	pass # Replace with function body.
