@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Rock Pile.png-fe576fc2e44a4b97a1c470e2c2f6dc4f.stex"
+path="res://.import/GrassBackground.png-4efbd1210a3c9a3fe69e77a408cbe3f4.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://CrossRiver/image/Rock Pile.png"
-dest_files=[ "res://.import/Rock Pile.png-fe576fc2e44a4b97a1c470e2c2f6dc4f.stex" ]
+source_file="res://new folder/World/GrassBackground.png"
+dest_files=[ "res://.import/GrassBackground.png-4efbd1210a3c9a3fe69e77a408cbe3f4.stex" ]
 
 [params]
 
@@ -19,8 +19,8 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
-flags/repeat=0
-flags/filter=true
+flags/repeat=1
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -31,5 +31,5 @@ process/invert_color=false
 process/normal_map_invert_y=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0
