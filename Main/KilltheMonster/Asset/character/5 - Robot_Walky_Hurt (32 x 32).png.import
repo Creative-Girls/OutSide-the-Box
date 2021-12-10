@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/nature-paltformer-tileset-16x16.png-a4ac57170d364984b630104b4cc69458.stex"
+path="res://.import/5 - Robot_Walky_Hurt (32 x 32).png-c90b64849b906d188d8247e999ceef4f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://KillTheMonster/Asset/nature-paltformer-tileset-16x16.png"
-dest_files=[ "res://.import/nature-paltformer-tileset-16x16.png-a4ac57170d364984b630104b4cc69458.stex" ]
+source_file="res://KilltheMonster/Asset/character/5 - Robot_Walky_Hurt (32 x 32).png"
+dest_files=[ "res://.import/5 - Robot_Walky_Hurt (32 x 32).png-c90b64849b906d188d8247e999ceef4f.stex" ]
 
 [params]
 
