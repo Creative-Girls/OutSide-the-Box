@@ -1,10 +1,11 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://KilltheMonster/Scene/Character.tscn" type="PackedScene" id=1]
 [ext_resource path="res://KilltheMonster/Scene/Ground.tscn" type="PackedScene" id=2]
 [ext_resource path="res://KilltheMonster/Scene/Monster.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Common/font/Default.tres" type="DynamicFont" id=4]
 
-[node name="Node2D" type="Node2D"]
+[node name="Main" type="Node2D"]
 __meta__ = {
 "_edit_group_": true,
 "_edit_lock_": true
@@ -26,3 +27,14 @@ position = Vector2( 50, 380 )
 
 [node name="Monster" parent="Node2D" instance=ExtResource( 3 )]
 position = Vector2( 850, 370 )
+
+[node name="Label" type="Label" parent="."]
+margin_right = 404.0
+margin_bottom = 70.0
+custom_fonts/font = ExtResource( 4 )
+text = "Spacebar : shooting"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}

@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://Intro/asset/font/IntroTitle.tres" type="DynamicFont" id=1]
-[ext_resource path="res://Intro/asset/font/ButtonText.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Common/font/IntroTitle.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Common/font/ButtonText.tres" type="DynamicFont" id=2]
 [ext_resource path="res://Intro/asset/intro/button.png" type="Texture" id=3]
 [ext_resource path="res://Intro/asset/intro/screenshot-1.png" type="Texture" id=4]
 [ext_resource path="res://Intro/asset/intro/buttonpress.png" type="Texture" id=5]
