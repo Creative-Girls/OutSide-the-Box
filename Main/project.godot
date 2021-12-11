@@ -20,7 +20,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="CrossRiver"
+config/name="OutSideTheBox"
 run/main_scene="res://Intro/Intro.tscn"
 config/icon="res://CrossRiver/image/icon.png"
 

@@ -77,6 +77,7 @@ func get_input():
 		_animated_sprite.flip_h = true
 	elif Input.is_action_pressed("ui_up"):
 		_on_Title_visibility_changed()
+		
 		velocity.y -= 1
 		_animated_sprite.play()
 		
@@ -111,6 +112,3 @@ func _on_GameClear_visibility_changed():
 func _on_Title_visibility_changed():
 	titlelabel.hide()
 
-
-func _on_Turtle_Obstacle_exited(body):
-	pass # Replace with function body.
