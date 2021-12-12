@@ -1,8 +1,66 @@
 [gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://KilltheMonster/Asset/character/1 - Agent_Mike_Idle (32 x 32).png" type="Texture" id=1]
-[ext_resource path="res://KilltheMonster/Script/Character.gd" type="Script" id=3]
 [ext_resource path="res://KilltheMonster/Asset/character/1 - Agent_Mike_Running (32 x 32).png" type="Texture" id=4]
+
+[sub_resource type="GDScript" id=8]
+script/source = "extends Area2D
+
+export var speed = 400  # How fast the player will move (pixels/sec).
+var screen_size  # Size of the game window.
+var MIN_JUMP = -500
+
+const GRAVITY  = 30
+const JUMPFORCE = -900
+
+func _ready():
+	screen_size = get_viewport_rect().size
+	
+func _process(delta):
+	var velocity = Vector2()  # The player's movement vector.
+	if Input.is_action_pressed(\"ui_right\"):
+		velocity.x += 1
+	if Input.is_action_pressed(\"ui_left\"):
+		velocity.x -= 1
+	if velocity.length() > 0:
+		velocity = velocity.normalized() * speed
+		$AnimatedSprite.play()
+	else:
+		$AnimatedSprite.stop()
+		
+	position += velocity * delta
+	position.x = clamp(position.x, 0, screen_size.x)
+	position.y = clamp(position.y, 0, screen_size.y)
+	
+	
+	#velocity.y = velocity.y + 1
+	
+	if(Input.is_action_just_pressed(\"jump\")):
+		velocity.y -= 5
+		
+	
+	#velocity = move_and_slide(velocity)
+	
+	
+	if velocity.x != 0:
+		$AnimatedSprite.animation = \"walk\"
+		$AnimatedSprite.flip_v = false
+		# See the note below about boolean assignment
+		$AnimatedSprite.flip_h = velocity.x < 0
+	elif velocity.y != 0:
+		$AnimatedSprite.animation = \"up\"
+		$AnimatedSprite.flip_v = velocity.y > 0
+	
+func _on_Player_body_entered(body):
+	hide()  # Player disappears after being hit.
+	emit_signal(\"hit\")
+	$CollisionShape2D.set_deferred(\"disabled\", true)
+
+func start(pos):
+	position = pos
+	show()
+	$CollisionShape2D.disabled = false
+"
 
 [sub_resource type="AtlasTexture" id=4]
 atlas = ExtResource( 4 )
@@ -36,7 +94,7 @@ animations = [ {
 [node name="KM_Monster" type="Area2D"]
 position = Vector2( 129, 144 )
 scale = Vector2( 0.5, 0.5 )
-script = ExtResource( 3 )
+script = SubResource( 8 )
 __meta__ = {
 "_edit_group_": true
 }
