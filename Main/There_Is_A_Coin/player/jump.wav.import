@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/hit.wav-20efdb0bb05d10fa77666d02e97397ed.sample"
+path="res://.import/jump.wav-6b6f39a523800cf203791eb07bda3172.sample"
 
 [deps]
 
-source_file="res://ThereIsCoin/player/hit.wav"
-dest_files=[ "res://.import/hit.wav-20efdb0bb05d10fa77666d02e97397ed.sample" ]
+source_file="res://There_Is_A_Coin/player/jump.wav"
+dest_files=[ "res://.import/jump.wav-6b6f39a523800cf203791eb07bda3172.sample" ]
 
 [params]
 

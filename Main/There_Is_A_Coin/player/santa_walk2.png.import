@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/tileset ground.png-19e907716863090e684d725f1a8aa868.stex"
+path="res://.import/santa_walk2.png-5861253c94448604c4344f2cd01ba4a9.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ThereIsCoin/world/tileset ground.png"
-dest_files=[ "res://.import/tileset ground.png-19e907716863090e684d725f1a8aa868.stex" ]
+source_file="res://There_Is_A_Coin/player/santa_walk2.png"
+dest_files=[ "res://.import/santa_walk2.png-5861253c94448604c4344f2cd01ba4a9.stex" ]
 
 [params]
 

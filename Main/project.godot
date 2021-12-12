@@ -9,10 +9,10 @@
 config_version=4
 
 _global_script_classes=[ {
-"base": "KinematicBody2D",
+"base": "Reference",
 "class": "Actor",
 "language": "GDScript",
-"path": "res://ThereIsCoin/player/Actor.gd"
+"path": "res://There_Is_A_Coin/player/Actor.gd"
 }, {
 "base": "Area2D",
 "class": "Obstacle",

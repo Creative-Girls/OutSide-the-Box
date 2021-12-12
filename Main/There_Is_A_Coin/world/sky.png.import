@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/santa_walk1.png-2e48273aae31e9256dd73e7a775f2ee0.stex"
+path="res://.import/sky.png-c1bf7f3d084646836a6cd00f8b2ca1b6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ThereIsCoin/player/santa_walk1.png"
-dest_files=[ "res://.import/santa_walk1.png-2e48273aae31e9256dd73e7a775f2ee0.stex" ]
+source_file="res://There_Is_A_Coin/world/sky.png"
+dest_files=[ "res://.import/sky.png-c1bf7f3d084646836a6cd00f8b2ca1b6.stex" ]
 
 [params]
 

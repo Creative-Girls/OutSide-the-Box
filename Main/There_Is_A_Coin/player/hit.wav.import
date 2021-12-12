@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/coin_pickup.wav-39a027614a30fffecc368783aa603605.sample"
+path="res://.import/hit.wav-06813ff46dd74c1f7a1bb1d89817bf5e.sample"
 
 [deps]
 
-source_file="res://ThereIsCoin/coin/coin_pickup.wav"
-dest_files=[ "res://.import/coin_pickup.wav-39a027614a30fffecc368783aa603605.sample" ]
+source_file="res://There_Is_A_Coin/player/hit.wav"
+dest_files=[ "res://.import/hit.wav-06813ff46dd74c1f7a1bb1d89817bf5e.sample" ]
 
 [params]
 

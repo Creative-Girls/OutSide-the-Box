@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/santa_walk2.png-a8d337c7192d539a1b304261c1bcb1b9.stex"
+path="res://.import/santa_idle.png-ad1b6b3df716e7fa89ef3a28fa30fa2b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ThereIsCoin/player/santa_walk2.png"
-dest_files=[ "res://.import/santa_walk2.png-a8d337c7192d539a1b304261c1bcb1b9.stex" ]
+source_file="res://There_Is_A_Coin/player/santa_idle.png"
+dest_files=[ "res://.import/santa_idle.png-ad1b6b3df716e7fa89ef3a28fa30fa2b.stex" ]
 
 [params]
 

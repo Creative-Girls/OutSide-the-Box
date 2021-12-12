@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/coin.png-9eb09608da72fd7306d51dd650c64b2d.stex"
+path="res://.import/tileset ground.png-0b239329a68e43f34e8c08cd284959ca.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ThereIsCoin/coin/coin.png"
-dest_files=[ "res://.import/coin.png-9eb09608da72fd7306d51dd650c64b2d.stex" ]
+source_file="res://There_Is_A_Coin/world/tileset ground.png"
+dest_files=[ "res://.import/tileset ground.png-0b239329a68e43f34e8c08cd284959ca.stex" ]
 
 [params]
 
