@@ -5,7 +5,7 @@ const GRAVITY = 600
 const WALK_SPEED = 250
 const JUMP_FORCE = 300
 
-#const BULLET = preload("res")
+const BULLET = preload("res://KilltheMonster/Scene/Bullet.tscn")
 
 var velocity = Vector2()
 var screen_size
@@ -36,7 +36,12 @@ func _physics_process(delta):
 		# smoothen the stop
 		velocity.x = lerp(velocity.x, 0, 0.1)
 	 
+	if Input.is_action_just_pressed("ui_focus_next"):
+		var bullet = BULLET.instance()
+		get_parent().add_child(bullet)
+	
 	velocity = move_and_slide(velocity, Vector2.UP)
+	
 	
 	# prevent player going out of screen
 	position.x = clamp(position.x, 0, 3775)
