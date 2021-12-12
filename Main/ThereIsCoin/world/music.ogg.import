@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/music.ogg-dcbe517ec4b072fc2842e33aaab7c59f.oggstr"
+
+[deps]
+
+source_file="res://ThereIsCoin/world/music.ogg"
+dest_files=[ "res://.import/music.ogg-dcbe517ec4b072fc2842e33aaab7c59f.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
