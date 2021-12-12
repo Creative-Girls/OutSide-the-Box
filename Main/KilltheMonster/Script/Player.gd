@@ -59,14 +59,12 @@ func _physics_process(delta):
 	$AnimatedSprite.play()
 
 	if velocity.x > 0 || velocity.x < 0:
-		print("running in")
 		$AnimatedSprite.animation = "running"
 		$AnimatedSprite.flip_v = false
 		# See the note below about boolean assignment
 		$AnimatedSprite.flip_h = velocity.x < 0
 
 	elif velocity.y > 0 || velocity.y < 0:
-		print("up in")
 		$AnimatedSprite.animation = "up"
 	elif velocity.x == 0 && velocity.y == 0:
 		$AnimatedSprite.animation = "idle"

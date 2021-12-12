@@ -13,6 +13,7 @@ func _ready():
 	pass # Replace with function body.
 	
 func set_bullet_direction(dir):
+	print("set_bullet_direction",dir)
 	direction = dir
 	if dir == -1:
 		$Sprite.flip_h = true
@@ -31,7 +32,9 @@ func _on_VisibilityNotifier2D_screen_exited():
 #	pass
 
 func _on_Bullet_body_entered(body):
+	print("aaaaaa")
+	print("aaaa",body)
 	if body.is_in_group("monster"):
 		body.hit()
-		queue_free()
+	queue_free()
 	#pass # Replace with function body.

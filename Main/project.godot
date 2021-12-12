@@ -20,7 +20,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="CrossRiver"
+config/name="OutSideTheBox"
 run/main_scene="res://Intro/Intro.tscn"
 config/icon="res://CrossRiver/image/icon.png"
 
@@ -36,7 +36,7 @@ layer=false
 
 jump={
 "deadzone": 0.5,
-"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":65,"unicode":0,"echo":false,"script":null)
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
  ]
 }
 
