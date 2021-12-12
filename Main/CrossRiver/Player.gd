@@ -21,11 +21,8 @@ onready var titlelabel = $"UI/Title"
 onready var step_player = $StepPlayer
 onready var rock_obstacle = $RockDestroy
 
-# var next_scene = preload("res://CoinWolrd/COINworld.tscn")
+var timer = null
 
-# func _level_completed():
-	# get_tree().change_scene_to(next_scene)
-	
 func _physics_process(delta):
 	get_input()
 	
@@ -43,7 +40,7 @@ func _physics_process(delta):
 			health = 0
 			print("GameOver!!")
 			gameoverlabel.show()
-			get_tree().paused = true
+			get_tree().change_scene("res://KilltheMonster/Scene/Main.tscn")
 			
 			
 	endposition = get_global_position()
@@ -53,7 +50,7 @@ func _physics_process(delta):
 		
 		print("GameClear!!")
 		gameclearlabel.show()
-		get_tree().paused = true
+		get_tree().change_scene("res://KilltheMonster/Scene/Main.tscn")
 		
 	
 	
@@ -77,6 +74,7 @@ func get_input():
 		_animated_sprite.flip_h = true
 	elif Input.is_action_pressed("ui_up"):
 		_on_Title_visibility_changed()
+		
 		velocity.y -= 1
 		_animated_sprite.play()
 		
@@ -111,6 +109,3 @@ func _on_GameClear_visibility_changed():
 func _on_Title_visibility_changed():
 	titlelabel.hide()
 
-
-func _on_Turtle_Obstacle_exited(body):
-	pass # Replace with function body.

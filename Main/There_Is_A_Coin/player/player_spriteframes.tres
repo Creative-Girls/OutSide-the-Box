@@ -1,0 +1,29 @@
+[gd_resource type="SpriteFrames" load_steps=5 format=2]
+
+[ext_resource path="res://There_Is_A_Coin/player/santa_idle.png" type="Texture" id=1]
+[ext_resource path="res://There_Is_A_Coin/player/santa_walk1.png" type="Texture" id=2]
+[ext_resource path="res://There_Is_A_Coin/player/santa_jump.png" type="Texture" id=3]
+[ext_resource path="res://There_Is_A_Coin/player/santa_walk2.png" type="Texture" id=4]
+
+[resource]
+animations = [ {
+"frames": [ ExtResource( 1 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "double jump",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "jump",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "walk",
+"speed": 5.0
+} ]
