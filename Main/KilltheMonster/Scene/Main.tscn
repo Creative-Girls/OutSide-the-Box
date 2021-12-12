@@ -14,16 +14,13 @@ __meta__ = {
 
 [node name="background" parent="." instance=ExtResource( 1 )]
 
-[node name="Monster" type="Node2D" parent="."]
-position = Vector2( 1974, -84 )
-
-[node name="Monster" parent="Monster" instance=ExtResource( 3 )]
-position = Vector2( 844, 404 )
+[node name="Monster2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2818, 320 )
 scale = Vector2( 0.630295, 0.630295 )
 
 [node name="Player" parent="." instance=ExtResource( 5 )]
-position = Vector2( 195, 341 )
-scale = Vector2( 0.5, 0.5 )
+position = Vector2( 199, 341 )
+scale = Vector2( 0.500863, 0.5 )
 
 [node name="Label" type="Label" parent="."]
 margin_right = 404.0
