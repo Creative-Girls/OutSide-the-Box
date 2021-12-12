@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://There_Is_A_Coin/player/jump.wav" type="AudioStream" id=1]
+[ext_resource path="res://There_Is_A_Coin/player/Jump.wav" type="AudioStream" id=1]
 [ext_resource path="res://There_Is_A_Coin/player/player.gd" type="Script" id=2]
 [ext_resource path="res://There_Is_A_Coin/player/player_spriteframes.tres" type="SpriteFrames" id=3]
+[ext_resource path="res://There_Is_A_Coin/player/hit.wav" type="AudioStream" id=4]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 7.0
@@ -40,4 +41,8 @@ shape = SubResource( 1 )
 
 [node name="Jump" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 1 )
+volume_db = 2.0
+
+[node name="GameOver" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 4 )
 volume_db = 2.0
