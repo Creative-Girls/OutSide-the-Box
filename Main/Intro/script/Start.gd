@@ -23,4 +23,4 @@ func _ready():
 
 
 func _on_Start_button_up():
-	get_tree().change_scene("res://CrossRiver/World.tscn")
+	get_tree().change_scene("res://Intro/Intro.tscn")

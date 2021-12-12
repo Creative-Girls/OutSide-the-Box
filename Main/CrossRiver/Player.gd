@@ -21,11 +21,8 @@ onready var titlelabel = $"UI/Title"
 onready var step_player = $StepPlayer
 onready var rock_obstacle = $RockDestroy
 
-# var next_scene = preload("res://CoinWolrd/COINworld.tscn")
+var timer = null
 
-# func _level_completed():
-	# get_tree().change_scene_to(next_scene)
-	
 func _physics_process(delta):
 	get_input()
 	
@@ -43,7 +40,7 @@ func _physics_process(delta):
 			health = 0
 			print("GameOver!!")
 			gameoverlabel.show()
-			get_tree().paused = true
+			get_tree().change_scene("res://KilltheMonster/Scene/Main.tscn")
 			
 			
 	endposition = get_global_position()
@@ -53,7 +50,7 @@ func _physics_process(delta):
 		
 		print("GameClear!!")
 		gameclearlabel.show()
-		get_tree().paused = true
+		get_tree().change_scene("res://KilltheMonster/Scene/Main.tscn")
 		
 	
 	
