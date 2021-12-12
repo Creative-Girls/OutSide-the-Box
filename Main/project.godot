@@ -9,18 +9,12 @@
 config_version=4
 
 _global_script_classes=[ {
-"base": "Reference",
-"class": "Actor",
-"language": "GDScript",
-"path": "res://There_Is_A_Coin/player/Actor.gd"
-}, {
 "base": "Area2D",
 "class": "Obstacle",
 "language": "GDScript",
 "path": "res://CrossRiver/Obstacle.gd"
 } ]
 _global_script_class_icons={
-"Actor": "",
 "Obstacle": ""
 }
 

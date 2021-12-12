@@ -29,7 +29,14 @@ func _physics_process(delta):
 	velocity = move_and_slide(velocity, Vector2.UP)
 	
 	velocity.x = lerp(velocity.x,0,0.2)
+	
+	var position = get_global_position()
+	if position.x > 5820:
+		get_tree().paused = true
+		print("GameClear")
+	elif position.y >800:
+		get_tree().change_scene("res://There_Is_A_Coin/world/World.tscn")
+		print("GameOver")
 
 
-func _on_fallZone_body_entered(body):
-	get_tree().change_scene("res://world/World.tscn")
+

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Jingle-Bells-3.wav-890621b8f57e55711126b6883c4b48fa.sample"
+
+[deps]
+
+source_file="res://There_Is_A_Coin/world/Jingle-Bells-3.wav"
+dest_files=[ "res://.import/Jingle-Bells-3.wav-890621b8f57e55711126b6883c4b48fa.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
