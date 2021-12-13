@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Common/font/IntroTitle.tres" type="DynamicFont" id=1]
 [ext_resource path="res://Common/font/ButtonText.tres" type="DynamicFont" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://Intro/script/Start.gd" type="Script" id=6]
 [ext_resource path="res://Intro/script/End.gd" type="Script" id=7]
 [ext_resource path="res://Intro/asset/intro/CoinInsert.wav" type="AudioStream" id=8]
+[ext_resource path="res://Intro/Story.gd" type="Script" id=9]
 
 [node name="Intro" type="Node2D"]
 
@@ -25,9 +26,9 @@ __meta__ = {
 
 [node name="Start" type="TextureButton" parent="."]
 margin_left = 456.0
-margin_top = 274.0
+margin_top = 250.0
 margin_right = 590.0
-margin_bottom = 408.0
+margin_bottom = 384.0
 texture_normal = ExtResource( 3 )
 texture_pressed = ExtResource( 5 )
 expand = true
@@ -52,9 +53,9 @@ __meta__ = {
 
 [node name="End" type="TextureButton" parent="."]
 margin_left = 456.0
-margin_top = 376.0
+margin_top = 352.0
 margin_right = 590.0
-margin_bottom = 510.0
+margin_bottom = 486.0
 texture_normal = ExtResource( 3 )
 texture_pressed = ExtResource( 5 )
 expand = true
@@ -98,6 +99,34 @@ stream = ExtResource( 8 )
 volume_db = 1.0
 autoplay = true
 
+[node name="Story" type="TextureButton" parent="."]
+margin_left = 457.0
+margin_top = 454.0
+margin_right = 591.0
+margin_bottom = 588.0
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 5 )
+expand = true
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Story_text" type="Label" parent="Story"]
+margin_left = 8.0
+margin_top = 43.0
+margin_right = 129.0
+margin_bottom = 87.0
+custom_colors/font_color = Color( 0.988235, 0.670588, 0, 1 )
+custom_fonts/font = ExtResource( 2 )
+text = "STORY"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [connection signal="button_up" from="Start" to="Start" method="_on_Start_button_up"]
 [connection signal="pressed" from="Start" to="Start" method="_on_Start_pressed"]
 [connection signal="pressed" from="End" to="End" method="_on_End_pressed"]
+[connection signal="button_up" from="Story" to="Story" method="_on_Story_button_up"]

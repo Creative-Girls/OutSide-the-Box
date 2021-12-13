@@ -16,11 +16,5 @@ func _ready():
 #	pass
 
 
-#func _on_Start_pressed():
-	#print("pressed START")
-	#get_tree().change_scene("res://Map1.tscn")
-	
-
-
-func _on_Start_button_up():
-	get_tree().change_scene("res://CrossRiver/World.tscn")
+func _on_Story_button_up():
+	get_tree().change_scene("res://Intro/Story.tscn")
