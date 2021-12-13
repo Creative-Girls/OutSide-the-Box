@@ -1,10 +1,11 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://There_Is_A_Coin/world/Jingle-Bells-3.wav" type="AudioStream" id=1]
 [ext_resource path="res://There_Is_A_Coin/player/player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://There_Is_A_Coin/world/ParallaxBackground.tscn" type="PackedScene" id=3]
 [ext_resource path="res://There_Is_A_Coin/coin/coin.tscn" type="PackedScene" id=4]
 [ext_resource path="res://There_Is_A_Coin/world/tileset ground.png" type="Texture" id=5]
+[ext_resource path="res://Common/font/ButtonText.tres" type="DynamicFont" id=6]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 32, 0, 32, 16, 32, 16, 16, 64, 16, 64, 32, 80, 32, 80, 80, 0, 80 )
@@ -358,6 +359,34 @@ margin_top = 307.584
 margin_right = 155.002
 margin_bottom = 321.584
 text = "Oh, There is a Coin!!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Merry" type="Label" parent="UI"]
+margin_left = 5629.92
+margin_top = 446.286
+margin_right = 5906.92
+margin_bottom = 480.286
+custom_fonts/font = ExtResource( 6 )
+custom_colors/font_color = Color( 0.539063, 0.0126343, 0.0126343, 1 )
+text = "Merry            ~~!!"
+align = 1
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Christmas" type="Label" parent="UI"]
+margin_left = 5654.89
+margin_top = 446.286
+margin_right = 5927.89
+margin_bottom = 480.286
+custom_fonts/font = ExtResource( 6 )
+custom_colors/font_color = Color( 0.152941, 0.360784, 0.0705882, 1 )
+text = "Christmas"
+align = 1
+uppercase = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
