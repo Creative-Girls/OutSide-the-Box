@@ -40,7 +40,7 @@ func _physics_process(delta):
 			health = 0
 			print("GameOver!!")
 			gameoverlabel.show()
-			get_tree().change_scene("res://KilltheMonster/Scene/Main.tscn")
+			get_tree().change_scene("res://CrossRiver/World.tscn")
 			
 			
 	endposition = get_global_position()
