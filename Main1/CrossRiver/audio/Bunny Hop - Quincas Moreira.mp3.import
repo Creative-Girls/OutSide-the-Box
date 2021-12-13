@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Bunny Hop - Quincas Moreira.mp3-2ff29e635f0f3c194de92ca9035b8d69.mp3str"
+
+[deps]
+
+source_file="res://CrossRiver/audio/Bunny Hop - Quincas Moreira.mp3"
+dest_files=[ "res://.import/Bunny Hop - Quincas Moreira.mp3-2ff29e635f0f3c194de92ca9035b8d69.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

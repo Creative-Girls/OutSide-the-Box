@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://CrossRiver/image/obstacle/squid-g.png" type="Texture" id=1]
+
+[node name="Area2D" type="Area2D"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -32, -32, -32, 0, -24, 0, -16, 8, -32, 8, -32, 32, 0, 32, 8, 24, 24, 32, 32, 32, 32, 16, 24, 24, 32, 8, 32, -16, 24, -16, 32, -24, 32, -32, 24, -32, 8, -16, 16, -8, 8, -8, -8, -24, 0, -32 )
+
+[node name="Squid-g" type="Sprite" parent="."]
+position = Vector2( 1.52588e-05, 1.52588e-05 )
+scale = Vector2( 3.75, 3.75 )
+texture = ExtResource( 1 )
