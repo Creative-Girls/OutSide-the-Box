@@ -109,7 +109,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Gaeun2" type="Label" parent="Ending"]
+[node name="Sieun" type="Label" parent="Ending"]
 margin_left = 416.0
 margin_top = 312.0
 margin_right = 520.0
@@ -123,7 +123,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Gaeun3" type="Label" parent="Ending"]
+[node name="Subin" type="Label" parent="Ending"]
 margin_left = 672.0
 margin_top = 312.0
 margin_right = 776.0
@@ -133,6 +133,20 @@ custom_fonts/font = SubResource( 2 )
 custom_colors/font_color_shadow = Color( 0.521569, 0.435294, 0.435294, 1 )
 text = "  There is A Coin
 Made by Subin Han"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Team name" type="Label" parent="Ending"]
+margin_left = 441.572
+margin_top = 506.417
+margin_right = 545.572
+margin_bottom = 542.417
+rect_scale = Vector2( 2, 2 )
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color_shadow = Color( 0.521569, 0.435294, 0.435294, 1 )
+text = "   Team 5
+Creative-Grils"
 __meta__ = {
 "_edit_use_anchors_": false
 }
