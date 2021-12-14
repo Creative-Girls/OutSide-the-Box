@@ -498,7 +498,6 @@ script = ExtResource( 2 )
 [node name="BGMPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 18 )
 autoplay = true
-bus = "Music"
 
 [node name="Player" type="KinematicBody2D" parent="."]
 collision_mask = 2
@@ -524,11 +523,9 @@ editor_draw_drag_margin = true
 
 [node name="StepPlayer" type="AudioStreamPlayer" parent="Player"]
 stream = ExtResource( 19 )
-bus = "Music"
 
 [node name="RockDestroy" type="AudioStreamPlayer" parent="Player"]
 stream = ExtResource( 20 )
-bus = "Music"
 
 [node name="UI" type="Node2D" parent="Player"]
 
@@ -539,8 +536,8 @@ margin_top = 4680.0
 margin_right = 505.0
 margin_bottom = 4708.0
 rect_scale = Vector2( 2, 2 )
-custom_fonts/font = SubResource( 10 )
 custom_colors/font_color = Color( 1, 0, 0, 1 )
+custom_fonts/font = SubResource( 10 )
 text = "Game Over !"
 align = 1
 valign = 1
@@ -555,8 +552,8 @@ margin_top = 4688.0
 margin_right = 477.0
 margin_bottom = 4702.0
 rect_scale = Vector2( 3, 3 )
-custom_fonts/font = SubResource( 11 )
 custom_colors/font_color = Color( 0.796078, 0.490196, 0.0588235, 1 )
+custom_fonts/font = SubResource( 11 )
 text = "GameClear"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -568,8 +565,8 @@ margin_top = 4680.0
 margin_right = 462.0
 margin_bottom = 4693.0
 rect_scale = Vector2( 3, 3 )
-custom_fonts/font = SubResource( 12 )
 custom_colors/font_color = Color( 0.2, 0.0941176, 0.717647, 1 )
+custom_fonts/font = SubResource( 12 )
 text = "Cross The River !!!"
 __meta__ = {
 "_edit_use_anchors_": false

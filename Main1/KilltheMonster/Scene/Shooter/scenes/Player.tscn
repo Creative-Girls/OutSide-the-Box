@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/images/spritesheet_characters.png" type="Texture" id=1]
+[ext_resource path="res://scripts/Player.gd" type="Script" id=2]
+
+[node name="Player" type="KinematicBody2D"]
+collision_layer = 2
+collision_mask = 9
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 0, -1 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 56, 44 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -26, -16, -19, -15, -17, -23, -8, -23, 1, -18, 1, -10, 10, -6, 10, 2, 26, 2, 30, 6, 29, 11, 19, 14, 2, 20, -14, 20, -22, 12, -26, 11 )
+
+[node name="Muzzle" type="Position2D" parent="."]
+position = Vector2( 31, 8 )

@@ -34,3 +34,12 @@ flip_h = true
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PoolVector2Array( -17, 14, -33, 39, -36, 59, -29, 65, -34, 72, -28, 79, -9, 79, -5, 69, 6, 68, 9, 77, 36, 76, 33, 71, 26, 65, 36, 59, 38, 51, 32, 29, 4, 7, -3, -6, -9, -12, -19, -20, -29, -17, -24, -5, -17, -3, -9, -1, -5, 9 )
+
+[node name="AnimatedSprite2" type="AnimatedSprite" parent="."]
+scale = Vector2( 5, 5 )
+frames = SubResource( 3 )
+animation = "move"
+flip_h = true
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -17, 14, -33, 39, -36, 59, -29, 65, -34, 72, -28, 79, -9, 79, -5, 69, 6, 68, 9, 77, 36, 76, 33, 71, 26, 65, 36, 59, 38, 51, 32, 29, 4, 7, -3, -6, -9, -12, -19, -20, -29, -17, -24, -5, -17, -3, -9, -1, -5, 9 )

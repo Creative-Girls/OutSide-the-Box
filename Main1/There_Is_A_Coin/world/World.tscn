@@ -233,7 +233,6 @@ __meta__ = {
 stream = ExtResource( 1 )
 volume_db = 2.0
 autoplay = true
-bus = "Music"
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2( -48, -1160 )
@@ -370,8 +369,8 @@ margin_left = 5629.92
 margin_top = 446.286
 margin_right = 5906.92
 margin_bottom = 480.286
-custom_fonts/font = ExtResource( 6 )
 custom_colors/font_color = Color( 0.539063, 0.0126343, 0.0126343, 1 )
+custom_fonts/font = ExtResource( 6 )
 text = "Merry            ~~!!"
 align = 1
 uppercase = true
@@ -384,8 +383,8 @@ margin_left = 5654.89
 margin_top = 446.286
 margin_right = 5927.89
 margin_bottom = 480.286
-custom_fonts/font = ExtResource( 6 )
 custom_colors/font_color = Color( 0.152941, 0.360784, 0.0705882, 1 )
+custom_fonts/font = ExtResource( 6 )
 text = "Christmas"
 align = 1
 uppercase = true

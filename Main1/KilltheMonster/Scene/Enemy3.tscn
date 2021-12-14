@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://KilltheMonster/Script/Enemy.gd" type="Script" id=1]
+[ext_resource path="res://KilltheMonster/Asset/character/8 - Roach_Idle (32 x 32).png" type="Texture" id=2]
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=5]
+atlas = ExtResource( 2 )
+region = Rect2( 32, 0, 32, 32 )
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ SubResource( 4 ), SubResource( 5 ) ],
+"loop": true,
+"name": "move",
+"speed": 5.0
+} ]
+
+[node name="KinematicBody2D" type="KinematicBody2D"]
+script = ExtResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+scale = Vector2( 5, 5 )
+frames = SubResource( 3 )
+animation = "move"
+flip_h = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2( -4, 34 )
+scale = Vector2( 4.24031, 4.80143 )
+polygon = PoolVector2Array( -4.71664, -5.8316, -6.60329, -3.33234, -6.60329, 1.24963, -5.65996, 5.41506, -3.06581, 8.33086, 3.77331, 7.2895, 7.78245, 4.58197, 8.48995, -3.74889, 4.95247, -6.66469 )
