@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://There_Is_A_Coin/world/Jingle-Bells-3.wav" type="AudioStream" id=1]
 [ext_resource path="res://There_Is_A_Coin/player/player.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://There_Is_A_Coin/coin/coin.tscn" type="PackedScene" id=4]
 [ext_resource path="res://There_Is_A_Coin/world/tileset ground.png" type="Texture" id=5]
 [ext_resource path="res://Common/font/ButtonText.tres" type="DynamicFont" id=6]
+[ext_resource path="res://Intro/Music Volume.tscn" type="PackedScene" id=7]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 32, 0, 32, 16, 32, 16, 16, 64, 16, 64, 32, 80, 32, 80, 80, 0, 80 )
@@ -232,6 +233,7 @@ __meta__ = {
 stream = ExtResource( 1 )
 volume_db = 2.0
 autoplay = true
+bus = "Music"
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2( -48, -1160 )
@@ -390,3 +392,27 @@ uppercase = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="VolumeInterface" type="VBoxContainer" parent="."]
+margin_left = -422.62
+margin_top = 50.9858
+margin_right = -273.62
+margin_bottom = 122.986
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Music_text" type="Label" parent="VolumeInterface"]
+margin_right = 149.0
+margin_bottom = 14.0
+text = "Music"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Music" parent="VolumeInterface" instance=ExtResource( 7 )]
+margin_right = 149.0
+
+[connection signal="mouse_entered" from="VolumeInterface/Music" to="VolumeInterface/Music" method="release_focus"]
+[connection signal="mouse_exited" from="VolumeInterface/Music" to="VolumeInterface/Music" method="release_focus"]
+[connection signal="value_changed" from="VolumeInterface/Music" to="VolumeInterface/Music" method="_on_value_changed"]

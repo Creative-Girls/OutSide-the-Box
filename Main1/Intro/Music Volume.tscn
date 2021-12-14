@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Intro/Music Volume.gd" type="Script" id=1]
+
+[node name="Music Volume" type="HSlider"]
+margin_top = 18.0
+margin_right = 124.0
+margin_bottom = 34.0
+max_value = 1.0
+step = 0.05
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

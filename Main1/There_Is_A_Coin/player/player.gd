@@ -35,7 +35,7 @@ func _physics_process(delta):
 	if position.x > 5820:
 		get_tree().change_scene("res://Outro/Main.tscn")
 		print("GameClear")
-	elif position.y >1000:
+	elif position.y >1500:
 		get_tree().change_scene("res://There_Is_A_Coin/world/World.tscn")
 	elif position.y >800:
 		$GameOver.play()

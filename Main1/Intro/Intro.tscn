@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Common/font/IntroTitle.tres" type="DynamicFont" id=1]
 [ext_resource path="res://Common/font/ButtonText.tres" type="DynamicFont" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://Intro/script/End.gd" type="Script" id=7]
 [ext_resource path="res://Intro/asset/intro/CoinInsert.wav" type="AudioStream" id=8]
 [ext_resource path="res://Intro/Story.gd" type="Script" id=9]
+[ext_resource path="res://Intro/Music Volume.tscn" type="PackedScene" id=11]
 
 [node name="Intro" type="Node2D"]
 
@@ -42,8 +43,8 @@ margin_left = 8.0
 margin_top = 43.0
 margin_right = 129.0
 margin_bottom = 87.0
-custom_colors/font_color = Color( 0.988235, 0.670588, 0, 1 )
 custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0.988235, 0.670588, 0, 1 )
 text = "START"
 align = 1
 valign = 1
@@ -69,8 +70,8 @@ margin_left = 1.0
 margin_top = 40.0
 margin_right = 134.0
 margin_bottom = 88.0
-custom_colors/font_color = Color( 0.988235, 0.670588, 0, 1 )
 custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0.988235, 0.670588, 0, 1 )
 text = "END"
 align = 1
 valign = 1
@@ -83,8 +84,8 @@ margin_left = 213.0
 margin_top = 112.0
 margin_right = 828.0
 margin_bottom = 230.0
-custom_colors/font_color = Color( 1, 0.772549, 0, 1 )
 custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 1, 0.772549, 0, 1 )
 text = "Outside the Box"
 align = 1
 valign = 1
@@ -98,6 +99,7 @@ __meta__ = {
 stream = ExtResource( 8 )
 volume_db = 1.0
 autoplay = true
+bus = "Music"
 
 [node name="Story" type="TextureButton" parent="."]
 margin_left = 457.0
@@ -117,8 +119,8 @@ margin_left = 8.0
 margin_top = 43.0
 margin_right = 129.0
 margin_bottom = 87.0
-custom_colors/font_color = Color( 0.988235, 0.670588, 0, 1 )
 custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0.988235, 0.670588, 0, 1 )
 text = "STORY"
 align = 1
 valign = 1
@@ -126,7 +128,30 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="VolumeInterface" type="VBoxContainer" parent="."]
+margin_left = 860.0
+margin_top = 24.0
+margin_right = 1009.0
+margin_bottom = 64.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Music_text" type="Label" parent="VolumeInterface"]
+margin_right = 149.0
+margin_bottom = 14.0
+text = "Music"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Music" parent="VolumeInterface" instance=ExtResource( 11 )]
+margin_right = 149.0
+
 [connection signal="button_up" from="Start" to="Start" method="_on_Start_button_up"]
 [connection signal="pressed" from="Start" to="Start" method="_on_Start_pressed"]
 [connection signal="pressed" from="End" to="End" method="_on_End_pressed"]
 [connection signal="button_up" from="Story" to="Story" method="_on_Story_button_up"]
+[connection signal="mouse_entered" from="VolumeInterface/Music" to="VolumeInterface/Music" method="release_focus"]
+[connection signal="mouse_exited" from="VolumeInterface/Music" to="VolumeInterface/Music" method="release_focus"]
+[connection signal="value_changed" from="VolumeInterface/Music" to="VolumeInterface/Music" method="_on_value_changed"]

@@ -42,7 +42,9 @@ shape = SubResource( 1 )
 [node name="Jump" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 1 )
 volume_db = 2.0
+bus = "Music"
 
 [node name="GameOver" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 4 )
 volume_db = 2.0
+bus = "Music"
