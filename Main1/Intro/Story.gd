@@ -15,6 +15,7 @@ func _ready():
 #func _process(delta):
 #	pass
 
-
+# Gaeun 
+# when pressed buttuon -> intro
 func _on_Story_button_up():
 	get_tree().change_scene("res://Intro/Story.tscn")

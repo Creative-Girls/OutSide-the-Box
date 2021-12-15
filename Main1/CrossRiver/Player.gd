@@ -30,6 +30,7 @@ func _physics_process(delta):
 	
 	var collision = move_and_collide(velocity*delta)
 	
+	# Gaeun 
 	# inflict damage if we are on the damage mode
 	if damage_mode:
 		health -= damage_per_second*delta
@@ -45,6 +46,8 @@ func _physics_process(delta):
 			
 	endposition = get_global_position()
 	
+	# Gaeun 
+	# when player come clear line
 	# Game clear
 	if endposition.y < -6549:
 		
@@ -97,11 +100,15 @@ func get_input():
 	
 	velocity = velocity.normalized() * speed
 
+# Gaeun 
+# obstacle damage
 func _on_Obstacle_body_entered(body):
 	damage_mode = true
 func _on_Obstacle_body_exited(body):
 	damage_mode = false
 
+# Gaeun 
+# game over or clear label
 func _on_GameOver_visibility_changed():
 	gameoverlabel.show()
 func _on_GameClear_visibility_changed():
