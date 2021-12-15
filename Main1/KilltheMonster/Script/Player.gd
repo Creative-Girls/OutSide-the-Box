@@ -19,13 +19,6 @@ func _ready():
 func _physics_process(delta):
 	velocity.y += delta * GRAVITY
 	var bullet = BULLET.instance()
-	
-	#if Input.is_action_pressed("ui_left"):
-	#	velocity.x = -WALK_SPEED
-	#	#bullet.velocity.x = -BULLET_SPEED*delta
-	#	print("aa",$Muzzle.position.x)
-	#	if sign($Muzzle.position.x) == 1:
-	#		$Muzzle.position.x *= -1
 			
 	if Input.is_action_pressed("ui_right"):
 		velocity.x = WALK_SPEED
@@ -33,10 +26,8 @@ func _physics_process(delta):
 			$Muzzle.position.x *= 1
 	else:
 		$AnimatedSprite.animation = "idle"
-		# velocity.x = 0
 		# smoothen the stop
 		velocity.x = lerp(velocity.x, 0, 0.1)
-		#bullet.velocity.x = lerp(bullet.veloity.x, 0, 0.1)
 		
 	if Input.is_action_pressed("ui_up") and is_on_floor():
 		$Jump.play()
@@ -48,12 +39,9 @@ func _physics_process(delta):
 		else:
 			bullet.set_bullet_direction(-1)
 		
-		#get_parent().add_child(bullet)
-		#bullet.position = $Position2D.global_position
 		shoot()
 		
 	velocity = move_and_slide(velocity, Vector2.UP)
-	#bullet.velocity = move_and_slide(velocity, Vector2.UP)	
 	
 	# prevent player going out of screen
 	position.x = clamp(position.x, 0, 3775)
@@ -74,10 +62,11 @@ func _physics_process(delta):
 		$AnimatedSprite.animation = "idle"
 		#$AnimatedSprite.flip_v = velocity.y > 0
 
+	#When you reach your destination, move on to the next map
 	if position.x > 3200:
 		print("clear")
 		get_tree().change_scene("res://There_is_A_Coin/world/World.tscn")
-		
+	#If you fall off a cliff, the game is over	
 	elif position.y >596:
 		get_tree().change_scene("res://KilltheMonster/Scene/Main.tscn")
 	#pass # Replace with function body.

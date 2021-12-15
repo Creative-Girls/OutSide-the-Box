@@ -31,10 +31,12 @@ func _on_VisibilityNotifier2D_screen_exited():
 #	pass
 
 func _on_Bullet_body_entered(body):
+	#When the bullet hits the monster, it changes direction
 	if body.is_in_group("monster"):
 		print("kill monster")
 		direction = direction*-1
-		
+	
+	#When the bullet hits the player, the game is over.	
 	if body.is_in_group("player"):
 		print("kill player")
 		body.hit()
