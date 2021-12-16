@@ -1,7 +1,9 @@
 extends HSlider
-
+#subin add
+#audio bus name is Master
 export var audio_bus_name := "Master"
 
+#get "Master" to AudioServer
 onready var _bus := AudioServer.get_bus_index(audio_bus_name)
 
 func _ready() -> void:
